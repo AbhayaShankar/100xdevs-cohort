@@ -9,6 +9,7 @@ HH:MM::SS (Eg. 13:45:23)
 HH:MM::SS AM/PM (Eg 01:45:23 PM)
 
 */
+/*
 
 let now = new Date();
 let hours = String(now.getHours());
@@ -51,3 +52,19 @@ console.log(clock);
 
 // },[seconds])
 // console.log('Current Time:', currentTime);
+
+*/
+
+const CLOCK = () => {
+  setInterval(() => {
+    const time = new Date();
+    const hours = time.getHours();
+    const minutes = time.getMinutes();
+    const seconds = time.getSeconds();
+
+    const clockTime = `Current Time is : ${hours}: ${minutes}: ${seconds}`;
+    console.log(clockTime);
+  }, 1000);
+};
+
+CLOCK();
